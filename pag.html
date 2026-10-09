@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-secondary-fixed":"#002115","surface-container-lowest":"#ffffff","on-secondary-container":"#007150","surface-dim":"#d1daf4","surface-container-low":"#f1f3ff","surface-tint":"#1d53d5","error":"#ba1a1a","on-primary":"#ffffff","primary":"#0f4cce","tertiary-fixed-dim":"#d0bcff","error-container":"#ffdad6","primary-fixed-dim":"#b5c4ff","outline":"#747686","on-primary-fixed-variant":"#003cad","outline-variant":"#c3c5d7","tertiary":"#6441b4","background":"#f9f9ff","on-tertiary-fixed-variant":"#522da1","secondary-fixed":"#7df9c5","on-tertiary-container":"#fbf3ff","on-primary-container":"#f6f5ff","on-secondary":"#ffffff","inverse-surface":"#273044","secondary-container":"#7af6c2","secondary":"#006c4c","tertiary-fixed":"#e9ddff","surface-container-highest":"#d9e2fc","on-tertiary-fixed":"#23005c","primary-container":"#3867e8","secondary-fixed-dim":"#5fdcaa","surface-bright":"#f9f9ff","on-primary-fixed":"#00164d","on-background":"#121b2e","inverse-on-surface":"#edf0ff","primary-fixed":"#dce1ff","on-surface-variant":"#434654","on-surface":"#121b2e","inverse-primary":"#b5c4ff","surface-container-high":"#e1e8ff","surface-variant":"#d9e2fc","surface":"#f9f9ff","on-error-container":"#93000a","tertiary-container":"#7d5bcf","on-tertiary":"#ffffff","surface-container":"#e9edff","on-secondary-fixed-variant":"#005139","on-error":"#ffffff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-md":"1rem","margin-tablet":"1.5rem","margin-desktop":"2rem","space-sm":"0.5rem","gutter-desktop":"1.5rem","space-lg":"1.5rem","margin":"1rem","gutter":"1rem","space-xs":"0.25rem","space-xl":"2rem"},"fontFamily":{"label-sm":["Inter"],"stat-xl":["JetBrains Mono"],"headline-sm":["Inter"],"display-lg":["Inter"],"headline-lg":["Inter"],"stat-md":["JetBrains Mono"],"body-md":["Inter"],"stat-sm":["JetBrains Mono"],"label-md":["Inter"],"headline-md":["Inter"],"body-lg":["Inter"],"display-lg-mobile":["Inter"],"stat-lg":["JetBrains Mono"],"body-sm":["Inter"]},"fontSize":{"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"500"}],"stat-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"stat-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"stat-sm":["12px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"400"}],"display-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"stat-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-container-lowest z-50 flex flex-col justify-between border-r border-outline-variant/30 select-none shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-outline-variant/30"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[18px]">insights</span></div><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Banking Intelligence</span><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider leading-none mt-space-xs font-semibold">QUANT ANALYTICS</span></div></div><div class="px-space-md py-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline px-space-sm font-semibold">Módulos Analíticos</span></div><nav class="flex flex-col gap-space-xs px-space-md" data-active-classes="bg-surface-container-high text-primary font-semibold relative before:content-[''] before:absolute before:left-0 before:top-1.5 before:bottom-1.5 before:w-1 before:bg-primary before:rounded-r"><a aria-current="page" class="group flex items-center gap-space-sm px-space-sm py-2 rounded-lg transition-colors bg-surface-container-high text-primary font-semibold relative before:content-[''] before:absolute before:left-0 before:top-1.5 before:bottom-1.5 before:w-1 before:bg-primary before:rounded-r" data-path="overview" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-on-surface transition-colors">dashboard</span><span>Overview</span></a><a class="group flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-label-md text-label-md transition-colors hover:bg-surface-container-low hover:text-on-surface" data-path="dataset-original" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-on-surface transition-colors">dataset</span><span>Dataset Original</span></a><a class="group flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-label-md text-label-md transition-colors hover:bg-surface-container-low hover:text-on-surface" data-path="reduccion-anova" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-on-surface transition-colors">tune</span><span>Reducción ANOVA</span></a><a class="group flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-label-md text-label-md transition-colors hover:bg-surface-container-low hover:text-on-surface" data-path="ranking-de-variables" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-on-surface transition-colors">leaderboard</span><span>Ranking de Variables</span></a><a class="group flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-label-md text-label-md transition-colors hover:bg-surface-container-low hover:text-on-surface" data-path="insights-bancarios" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-on-surface transition-colors">query_stats</span><span>Insights Bancarios</span></a><a class="group flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant font-label-md text-label-md transition-colors hover:bg-surface-container-low hover:text-on-surface" data-path="dataset-reducido" href="#"><span class="material-symbols-outlined text-[18px] text-outline group-hover:text-on-surface transition-colors">view_column</span><span>Dataset Reducido</span></a></nav></div><div class="p-space-md border-t border-outline-variant/30 flex flex-col gap-space-xs"><div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1 border border-outline-variant/30"><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm font-semibold tracking-wider uppercase text-outline">PROJECT</span></div><span class="font-stat-sm text-stat-sm text-on-surface truncate">BANK MARKETING ML</span></div><div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1 border border-outline-variant/30"><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="font-label-sm text-label-sm font-semibold tracking-wider uppercase text-outline">METHOD</span></div><span class="font-stat-sm text-stat-sm text-on-surface truncate">ANOVA F-VALUE</span></div><div class="mt-space-xs flex items-center justify-between px-space-xs text-outline"><span class="font-label-sm text-label-sm">Production Ready</span><span class="w-2 h-2 rounded-full bg-secondary-fixed-dim inline-block animate-pulse"></span></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-md z-40 border-b border-outline-variant/30 flex items-center justify-between px-space-lg shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-outline">Banking Intelligence</span><span class="text-outline-variant">/</span><span class="font-label-md text-label-md text-on-surface font-semibold">Quant Analytics</span><div class="ml-space-sm h-4 w-[1px] bg-outline-variant/40"></div><div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-stat-sm text-stat-sm"><span class="material-symbols-outlined text-[13px] text-outline">calendar_today</span><span>Octubre 2024 · v2.4</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed/30 border border-secondary/20 text-secondary font-label-sm text-label-sm font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>PIPELINE VERIFICADO</span></div><div class="h-4 w-[1px] bg-outline-variant/40"></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 min-h-screen bg-background"><div class="flex flex-col w-full">
+<div class="p-space-lg lg:p-margin-desktop flex flex-col gap-space-xl max-w-[1520px] mx-auto w-full">
+<!-- 1. HEADER PRINCIPAL -->
+<header class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pb-space-lg border-b border-outline-variant/30">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg lg:text-display-lg text-on-surface tracking-tight font-semibold">
+            Bank Marketing Analytics
+          </h1>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary font-label-md text-label-md font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            ANOVA FEATURE SELECTION
+          </span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+          Selección estadística de características para análisis de conversión bancaria
+        </p>
+<div class="flex items-center gap-2 mt-1 text-outline font-stat-sm text-stat-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">description</span>
+<span class="font-semibold text-on-surface-variant">bank-additional-full.csv</span>
+<span>·</span>
+<span>Clasificación binaria</span>
+<span>·</span>
+<span class="inline-flex items-center gap-1 font-semibold text-primary">Target: <code class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-stat-sm">y</code></span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<div class="flex flex-col items-end px-space-md py-2 bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">MÉTODO ESTADÍSTICO</span>
+<span class="font-stat-md text-stat-md text-on-surface font-semibold">SelectKBest (F-Test)</span>
+</div>
+</div>
+</header>
+<!-- 2. RESUMEN EJECUTIVO (5 KPI Cards) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm relative overflow-hidden flex flex-col justify-between p-space-md">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary"></div>
+<div class="flex items-start justify-between gap-2 mb-space-sm">
+<span class="font-label-md text-label-md text-outline font-semibold tracking-wide uppercase">Registros analizados</span>
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">table_rows</span>
+</div>
+</div>
+<div>
+<div class="font-stat-xl text-stat-xl text-on-surface tracking-tight">41,188</div>
+<p class="font-body-sm text-body-sm text-outline mt-1">Observaciones del dataset.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm relative overflow-hidden flex flex-col justify-between p-space-md">
+<div class="absolute top-0 left-0 right-0 h-1 bg-tertiary"></div>
+<div class="flex items-start justify-between gap-2 mb-space-sm">
+<span class="font-label-md text-label-md text-outline font-semibold tracking-wide uppercase">Variables originales</span>
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">input</span>
+</div>
+</div>
+<div>
+<div class="font-stat-xl text-stat-xl text-on-surface tracking-tight">21</div>
+<p class="font-body-sm text-body-sm text-outline mt-1">Características de entrada según el esquema.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm relative overflow-hidden flex flex-col justify-between p-space-md">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary-container"></div>
+<div class="flex items-start justify-between gap-2 mb-space-sm">
+<span class="font-label-md text-label-md text-outline font-semibold tracking-wide uppercase">Variables seleccionadas</span>
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed/50 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">fact_check</span>
+</div>
+</div>
+<div>
+<div class="font-stat-xl text-stat-xl text-secondary tracking-tight">3</div>
+<p class="font-body-sm text-body-sm text-outline mt-1">Características conservadas mediante ANOVA.</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm relative overflow-hidden flex flex-col justify-between p-space-md">
+<div class="absolute top-0 left-0 right-0 h-1 bg-[#E99A36]"></div>
+<div class="flex items-start justify-between gap-2 mb-space-sm">
+<span class="font-label-md text-label-md text-outline font-semibold tracking-wide uppercase">Variables descartadas</span>
+<div class="w-8 h-8 rounded-lg bg-[#FFF3E2] flex items-center justify-center text-[#E99A36]">
+<span class="material-symbols-outlined text-[18px]">filter_alt_off</span>
+</div>
+</div>
+<div>
+<div class="font-stat-xl text-stat-xl text-on-surface tracking-tight">18</div>
+<p class="font-body-sm text-body-sm text-outline mt-1">Eliminadas del espacio predictivo.</p>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm relative overflow-hidden flex flex-col justify-between p-space-md">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+<div class="flex items-start justify-between gap-2 mb-space-sm">
+<span class="font-label-md text-label-md text-outline font-semibold tracking-wide uppercase">Reducción dimensional</span>
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed/60 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">compress</span>
+</div>
+</div>
+<div>
+<div class="font-stat-xl text-stat-xl text-secondary tracking-tight">85.7%</div>
+<p class="font-body-sm text-body-sm text-outline mt-1">Menor número de características.</p>
+</div>
+</div>
+</section>
+<!-- 3. DISTRIBUCIÓN DE LA VARIABLE OBJETIVO -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 p-space-lg shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">pie_chart</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Distribución de la Variable Objetivo (<span class="font-stat-sm text-primary">y</span>)</h2>
+</div>
+<div class="flex items-center gap-space-md text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-sm bg-primary inline-block"></span>
+<span class="text-on-surface font-semibold">'no' (Sin suscripción): 36,548</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-sm bg-[#159DA4] inline-block"></span>
+<span class="text-on-surface font-semibold">'yes' (Suscrito): 4,640</span>
+</div>
+</div>
+</div>
+<!-- Barra horizontal segmentada -->
+<div class="flex flex-col gap-2">
+<div class="w-full h-7 rounded-lg overflow-hidden flex bg-surface-container p-0.5">
+<div class="h-full bg-primary rounded-l-md flex items-center justify-between px-3 text-on-primary font-stat-sm text-stat-sm transition-all" style="width: 88.73%;">
+<span class="font-semibold">no: 88.73%</span>
+<span class="opacity-80 text-[11px] hidden sm:inline">36,548 obs</span>
+</div>
+<div class="h-full bg-[#159DA4] rounded-r-md flex items-center justify-between px-2.5 text-on-primary font-stat-sm text-stat-sm transition-all" style="width: 11.27%;">
+<span class="font-semibold text-center w-full">yes: 11.27%</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-outline px-1">
+<span>La distribución de clases muestra una mayor proporción de clientes que no suscriben el depósito a plazo.</span>
+<span class="font-stat-sm text-stat-sm text-on-surface-variant font-semibold">Total: 41,188 registros</span>
+</div>
+</div>
+</section>
+<!-- 4. VISTA PREVIA DEL DATASET ORIGINAL -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-sm border-b border-outline-variant/20">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Dataset Original</h2>
+<p class="font-body-sm text-body-sm text-outline">Muestra de los datos antes de la reducción de dimensionalidad</p>
+</div>
+<span class="self-start md:self-auto px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-stat-sm text-stat-sm font-semibold border border-outline-variant/30">
+          bank-additional-full.csv (41,188 filas × 21 columnas)
+        </span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#F1F5F9] border-b border-outline-variant/30">
+<th class="py-2.5 px-3 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">age</th>
+<th class="py-2.5 px-3 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">job</th>
+<th class="py-2.5 px-3 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">marital</th>
+<th class="py-2.5 px-3 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">education</th>
+<th class="py-2.5 px-3 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">default</th>
+<th class="py-2.5 px-3 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">housing</th>
+<th class="py-2.5 px-3 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">loan</th>
+<th class="py-2.5 px-3 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">contact</th>
+<th class="py-2.5 px-3 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">month</th>
+<th class="py-2.5 px-3 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">day_of_week</th>
+<th class="py-2.5 px-3 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold text-right">duration</th>
+<th class="py-2.5 px-3 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold text-right">campaign</th>
+<th class="py-2.5 px-3 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold text-right">pdays</th>
+<th class="py-2.5 px-3 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold text-center">y</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20 font-stat-sm text-stat-sm text-on-surface">
+<!-- Row 1 -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-3">56</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">housemaid</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">married</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">basic.4y</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">no</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">no</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">no</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">telephone</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">may</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">mon</td>
+<td class="py-2.5 px-3 text-right font-semibold text-primary">261</td>
+<td class="py-2.5 px-3 text-right">1</td>
+<td class="py-2.5 px-3 text-right text-secondary font-semibold">999</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-block px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-semibold text-outline">no</span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="bg-[#F8FAFC] hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-3">57</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">services</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">married</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">high.school</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">unknown</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">no</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">no</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">telephone</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">may</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">mon</td>
+<td class="py-2.5 px-3 text-right font-semibold text-primary">149</td>
+<td class="py-2.5 px-3 text-right">1</td>
+<td class="py-2.5 px-3 text-right text-secondary font-semibold">999</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-block px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-semibold text-outline">no</span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-3">37</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">services</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">married</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">high.school</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">no</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">yes</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">no</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">telephone</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">may</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">mon</td>
+<td class="py-2.5 px-3 text-right font-semibold text-primary">226</td>
+<td class="py-2.5 px-3 text-right">1</td>
+<td class="py-2.5 px-3 text-right text-secondary font-semibold">999</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-block px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-semibold text-outline">no</span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="bg-[#F8FAFC] hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-3">40</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">admin.</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">married</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">basic.6y</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">no</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">no</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">no</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">telephone</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">may</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">mon</td>
+<td class="py-2.5 px-3 text-right font-semibold text-primary">151</td>
+<td class="py-2.5 px-3 text-right">1</td>
+<td class="py-2.5 px-3 text-right text-secondary font-semibold">999</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-block px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-semibold text-outline">no</span>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2.5 px-3">56</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">services</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">married</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">high.school</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">no</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">no</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">yes</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">telephone</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">may</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-body-sm">mon</td>
+<td class="py-2.5 px-3 text-right font-semibold text-primary">307</td>
+<td class="py-2.5 px-3 text-right">1</td>
+<td class="py-2.5 px-3 text-right text-secondary font-semibold">999</td>
+<td class="py-2.5 px-3 text-center">
+<span class="inline-block px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-semibold text-outline">no</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-space-lg py-2.5 bg-surface-container-low flex items-center justify-between border-t border-outline-variant/30 text-outline font-label-sm text-label-sm">
+<span>Mostrando 5 de 41,188 registros de muestra</span>
+<span class="text-on-surface-variant font-semibold">Columnas adicionales incluidas en el dataset: emp.var.rate, cons.price.idx, cons.conf.idx, euribor3m, nr.employed</span>
+</div>
+</section>
+<!-- 5. RESULTADO DE LA REDUCCIÓN ANOVA -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 p-space-lg lg:p-margin-desktop shadow-sm flex flex-col gap-space-lg">
+<div class="flex flex-col gap-1">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+          Resultado de la Reducción de Dimensionalidad
+        </h2>
+<p class="font-body-md text-body-md text-outline">
+          SelectKBest + ANOVA F-value (Análisis de varianza univariante)
+        </p>
+</div>
+<!-- Diagrama de Proceso Horizontal en 4 Bloques -->
+<div class="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md pt-2">
+<!-- Bloque 1 -->
+<div class="bg-surface-container-low rounded-xl p-space-md border border-outline-variant/30 relative flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center font-stat-sm text-stat-sm font-semibold text-primary">01</span>
+<span class="material-symbols-outlined text-outline text-[20px]">dataset</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Dataset Original</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">21 variables de entrada multidimensionales</span>
+</div>
+<!-- Bloque 2 -->
+<div class="bg-surface-container-low rounded-xl p-space-md border border-outline-variant/30 relative flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center font-stat-sm text-stat-sm font-semibold text-tertiary">02</span>
+<span class="material-symbols-outlined text-outline text-[20px]">functions</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Análisis ANOVA</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">F-Test univariante entre cada variable y el target</span>
+</div>
+<!-- Bloque 3 -->
+<div class="bg-surface-container-low rounded-xl p-space-md border border-outline-variant/30 relative flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center font-stat-sm text-stat-sm font-semibold text-[#159DA4]">03</span>
+<span class="material-symbols-outlined text-outline text-[20px]">sort</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Ranking de Variables</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ordenamiento descendente por magnitud de señal F</span>
+</div>
+<!-- Bloque 4 -->
+<div class="bg-secondary-fixed/20 rounded-xl p-space-md border border-secondary/30 relative flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-lg bg-secondary text-on-secondary flex items-center justify-center font-stat-sm text-stat-sm font-semibold">04</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Top 3 Seleccionadas</span>
+<span class="font-body-sm text-body-sm text-secondary font-semibold font-stat-sm">duration, nr.employed, pdays</span>
+</div>
+</div>
+<!-- Comparador visual de 2 paneles conectado -->
+<div class="grid grid-cols-1 lg:grid-cols-11 gap-space-md items-center mt-space-sm">
+<!-- Panel Izquierdo (Antes) -->
+<div class="lg:col-span-5 bg-surface-container-low rounded-xl p-space-lg border border-outline-variant/30 flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 rounded-full bg-primary/10 text-primary font-label-md text-label-md font-semibold">
+              ORIGINAL DATASET
+            </span>
+<span class="font-stat-sm text-stat-sm text-outline">Estado Inicial</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between pb-2 border-b border-outline-variant/30">
+<span class="font-body-md text-body-md text-on-surface-variant">Variables de entrada</span>
+<span class="font-stat-lg text-stat-lg text-on-surface font-semibold">21</span>
+</div>
+<div class="flex items-center justify-between pb-2 border-b border-outline-variant/30">
+<span class="font-body-md text-body-md text-on-surface-variant">Observaciones</span>
+<span class="font-stat-md text-stat-md text-on-surface">41,188</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant">Espacio vectorial</span>
+<span class="font-label-md text-label-md text-outline">Dimensionalidad completa</span>
+</div>
+</div>
+</div>
+<!-- Centro (Flecha & Badge de Reducción) -->
+<div class="lg:col-span-1 flex flex-col items-center justify-center py-2 lg:py-0">
+<div class="w-12 h-12 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[24px]">arrow_forward</span>
+</div>
+<span class="mt-2 text-center font-stat-sm text-stat-sm font-semibold text-secondary whitespace-nowrap">
+            -85.7% de reducción
+          </span>
+</div>
+<!-- Panel Derecho (Después) -->
+<div class="lg:col-span-5 bg-secondary-fixed/15 rounded-xl p-space-lg border border-secondary/30 flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 rounded-full bg-secondary-container text-secondary font-label-md text-label-md font-semibold">
+              REDUCED DATASET
+            </span>
+<span class="font-stat-sm text-stat-sm text-secondary font-semibold">ANOVA Optimizado</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between pb-2 border-b border-secondary/20">
+<span class="font-body-md text-body-md text-on-surface">Variables seleccionadas</span>
+<span class="font-stat-lg text-stat-lg text-secondary font-semibold">3</span>
+</div>
+<div class="flex items-center justify-between pb-2 border-b border-secondary/20">
+<span class="font-body-md text-body-md text-on-surface-variant">Variables descartadas</span>
+<span class="font-stat-md text-stat-md text-on-surface-variant">18</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant">Espacio de características</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">Espacio optimizado</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. GRÁFICO DE RANKING ANOVA Y TARJETAS DE VARIABLES -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 p-space-lg lg:p-margin-desktop shadow-sm flex flex-col gap-space-xl">
+<div class="flex flex-col gap-1">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+          Ranking de Características Seleccionadas
+        </h2>
+<p class="font-body-md text-body-md text-outline">
+          Estadístico F de ANOVA por variable univariante
+        </p>
+</div>
+<!-- Diseño de 2 Columnas: Gráfico Horizontal vs Panel Explicativo -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Columna Izquierda: Gráfico de Barras Horizontales -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-md">
+<!-- Barra 1: duration -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-stat-md text-stat-md font-semibold text-on-surface">duration</span>
+<span class="font-stat-md text-stat-md font-semibold text-primary">F = 8,094.10</span>
+</div>
+<div class="w-full bg-surface-container h-7 rounded-md overflow-hidden relative">
+<div class="h-full bg-primary rounded-md flex items-center justify-end pr-3 transition-all duration-500" style="width: 100%;">
+<span class="text-on-primary font-stat-sm text-stat-sm font-semibold">8,094.10</span>
+</div>
+</div>
+</div>
+<!-- Barra 2: nr.employed -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-stat-md text-stat-md font-semibold text-on-surface">nr.employed</span>
+<span class="font-stat-md text-stat-md font-semibold text-tertiary">F = 5,926.61</span>
+</div>
+<div class="w-full bg-surface-container h-7 rounded-md overflow-hidden relative">
+<div class="h-full bg-tertiary rounded-md flex items-center justify-end pr-3 transition-all duration-500" style="width: 73.2%;">
+<span class="text-on-tertiary font-stat-sm text-stat-sm font-semibold">5,926.61</span>
+</div>
+</div>
+</div>
+<!-- Barra 3: pdays -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-stat-md text-stat-md font-semibold text-on-surface">pdays</span>
+<span class="font-stat-md text-stat-md font-semibold text-[#159DA4]">F = 4,861.17</span>
+</div>
+<div class="w-full bg-surface-container h-7 rounded-md overflow-hidden relative">
+<div class="h-full bg-[#159DA4] rounded-md flex items-center justify-end pr-3 transition-all duration-500" style="width: 60.1%;">
+<span class="text-on-primary font-stat-sm text-stat-sm font-semibold">4,861.17</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Escala del Eje X -->
+<div class="pt-2 border-t border-outline-variant/30 flex items-center justify-between font-stat-sm text-stat-sm text-outline px-1">
+<span>0</span>
+<span>2,000</span>
+<span>4,000</span>
+<span>6,000</span>
+<span>8,000</span>
+</div>
+</div>
+<!-- Columna Derecha: Panel Explicativo -->
+<div class="lg:col-span-5 bg-surface-container-low rounded-xl p-space-lg border border-outline-variant/30 flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">help_outline</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">¿Cómo interpretar el ranking?</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            El estadístico F compara la variabilidad entre las clases con la variabilidad dentro de ellas. Un valor mayor indica una mayor separación estadística de las medias en el análisis univariante. No demuestra causalidad ni garantiza por sí solo una mejor predicción.
+          </p>
+<div class="bg-surface-container-highest/60 rounded-lg p-space-md border border-outline-variant/30 flex items-start gap-3">
+<span class="material-symbols-outlined text-[#E99A36] text-[20px] shrink-0 mt-0.5">warning</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Advertencia Metodológica</span>
+<span class="font-body-sm text-body-sm text-outline">
+                El estadístico F evalúa cada característica de forma aislada sin capturar correlaciones multivariantes o interacciones no lineales entre las variables.
+              </span>
+</div>
+</div>
+</div>
+</div>
+<!-- 3 Tarjetas Horizontales de Variables Seleccionadas -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-md border-t border-outline-variant/30">
+<!-- Tarjeta 01: duration -->
+<div class="bg-surface-container-low rounded-xl p-space-md border-l-4 border-l-primary border border-outline-variant/30 flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-stat-sm text-stat-sm text-primary font-semibold">01 · VARIABLE PRINCIPAL</span>
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-stat-sm text-stat-sm font-semibold">F: 8,094.10</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">duration</h4>
+<p class="font-body-sm text-body-sm text-outline">duración de la llamada en segundos</p>
+</div>
+<div class="pt-2 border-t border-outline-variant/20 font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-on-surface">Insight:</strong> Mayor asociación univariante reportada con la variable objetivo.
+          </div>
+</div>
+<!-- Tarjeta 02: nr.employed -->
+<div class="bg-surface-container-low rounded-xl p-space-md border-l-4 border-l-tertiary border border-outline-variant/30 flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-stat-sm text-stat-sm text-tertiary font-semibold">02 · MACROECONOMÍA</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-tertiary font-stat-sm text-stat-sm font-semibold">F: 5,926.61</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">nr.employed</h4>
+<p class="font-body-sm text-body-sm text-outline">indicador macroeconómico relacionado con el número de empleados</p>
+</div>
+<div class="pt-2 border-t border-outline-variant/20 font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-on-surface">Insight:</strong> Presenta diferencias estadísticas entre las clases de la variable objetivo.
+          </div>
+</div>
+<!-- Tarjeta 03: pdays -->
+<div class="bg-surface-container-low rounded-xl p-space-md border-l-4 border-l-[#159DA4] border border-outline-variant/30 flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-stat-sm text-stat-sm text-[#159DA4] font-semibold">03 · CAMPAÑA PREVIA</span>
+<span class="px-2 py-0.5 rounded bg-[#E3F7F7] text-[#159DA4] font-stat-sm text-stat-sm font-semibold">F: 4,861.17</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">pdays</h4>
+<p class="font-body-sm text-body-sm text-outline">días desde el último contacto de una campaña anterior</p>
+</div>
+<div class="pt-2 border-t border-outline-variant/20 font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-on-surface">Insight:</strong> Puede aportar información sobre el historial de contacto; el valor 999 representa ausencia de contacto previo según la codificación del dataset.
+          </div>
+</div>
+</div>
+</section>
+<!-- 7. INTERPRETACIÓN BANCARIA (Banking Insights) -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 p-space-lg lg:p-margin-desktop shadow-sm flex flex-col gap-space-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">query_stats</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Banking Insights</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Insight Card 1 -->
+<div class="bg-surface-container-low rounded-xl p-space-lg border border-outline-variant/30 flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-1">
+<span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Contact Intelligence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface">duration</strong> presenta la mayor puntuación ANOVA del análisis. Su interpretación ayuda a estudiar las características de las conversaciones asociadas con la suscripción. Esta variable no está disponible antes de iniciar la llamada.
+          </p>
+</div>
+<!-- Insight Card 2 -->
+<div class="bg-surface-container-low rounded-xl p-space-lg border border-outline-variant/30 flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-[#E3F7F7] flex items-center justify-center text-[#159DA4] mb-1">
+<span class="material-symbols-outlined text-[20px]">history</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Customer Re-engagement</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface">pdays</strong> permite explorar la relación entre el historial de contacto y la suscripción, ofreciendo información útil para analizar posibles estrategias de seguimiento.
+          </p>
+</div>
+<!-- Insight Card 3 -->
+<div class="bg-surface-container-low rounded-xl p-space-lg border border-outline-variant/30 flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary mb-1">
+<span class="material-symbols-outlined text-[20px]">trending_up</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Economic Context</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface">nr.employed</strong> presenta una asociación estadística con la variable objetivo y permite examinar la relación entre el contexto macroeconómico y las campañas bancarias.
+          </p>
+</div>
+</div>
+<!-- Franja de conclusión -->
+<div class="p-space-md rounded-xl bg-primary/5 border border-primary/20 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0">check_circle_outline</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-normal">
+<strong class="font-semibold text-primary">Conclusión del análisis:</strong> La selección ANOVA reduce el número de características a tres variables con elevadas puntuaciones estadísticas individuales. La reducción simplifica el análisis, pero no demuestra causalidad ni garantiza por sí sola una mejora predictiva.
+        </p>
+</div>
+</section>
+<!-- 8. TABLA DEL DATASET REDUCIDO Y BOTÓN DE DESCARGA -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm overflow-hidden flex flex-col mb-space-lg">
+<div class="p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-sm border-b border-outline-variant/20">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Dataset Reducido</h2>
+<p class="font-body-sm text-body-sm text-outline">Vista previa de las características seleccionadas y la variable objetivo</p>
+</div>
+<span class="self-start md:self-auto px-3 py-1 rounded-full bg-secondary-fixed/30 text-secondary font-stat-sm text-stat-sm font-semibold border border-secondary/20">
+          3 variables seleccionadas + 1 target (4 columnas)
+        </span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#F1F5F9] border-b border-outline-variant/30">
+<th class="py-3 px-4 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">duration</th>
+<th class="py-3 px-4 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">pdays</th>
+<th class="py-3 px-4 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">nr.employed</th>
+<th class="py-3 px-4 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold text-center">y</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20 font-stat-md text-stat-md text-on-surface">
+<!-- Row 1 -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-4 font-semibold text-primary">261</td>
+<td class="py-3 px-4 text-[#159DA4] font-semibold">999</td>
+<td class="py-3 px-4 text-tertiary font-semibold">5191</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-block px-2.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-semibold text-outline">no</span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="bg-[#F8FAFC] hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-4 font-semibold text-primary">149</td>
+<td class="py-3 px-4 text-[#159DA4] font-semibold">999</td>
+<td class="py-3 px-4 text-tertiary font-semibold">5191</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-block px-2.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-semibold text-outline">no</span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-4 font-semibold text-primary">226</td>
+<td class="py-3 px-4 text-[#159DA4] font-semibold">999</td>
+<td class="py-3 px-4 text-tertiary font-semibold">5191</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-block px-2.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-semibold text-outline">no</span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="bg-[#F8FAFC] hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-4 font-semibold text-primary">151</td>
+<td class="py-3 px-4 text-[#159DA4] font-semibold">999</td>
+<td class="py-3 px-4 text-tertiary font-semibold">5191</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-block px-2.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-semibold text-outline">no</span>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-4 font-semibold text-primary">307</td>
+<td class="py-3 px-4 text-[#159DA4] font-semibold">999</td>
+<td class="py-3 px-4 text-tertiary font-semibold">5191</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-block px-2.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm font-semibold text-outline">no</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Footer & Botón de Descarga -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-md border-t border-outline-variant/30">
+<div class="flex items-center gap-2 text-outline font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>41,188 registros listos para downstream modeling o exportación</span>
+</div>
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-space-lg py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-on-primary-fixed-variant transition-all shadow-sm active:scale-[0.99] cursor-pointer" id="downloadBtn">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Descargar Dataset Reducido (CSV)</span>
+</button>
+</div>
+</section>
+</div>
+<script>
+    document.getElementById('downloadBtn').addEventListener('click', function() {
+      const csvContent = "data:text/csv;charset=utf-8," 
+        + "duration,pdays,nr.employed,y\n"
+        + "261,999,5191,no\n"
+        + "149,999,5191,no\n"
+        + "226,999,5191,no\n"
+        + "151,999,5191,no\n"
+        + "307,999,5191,no\n";
+      
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", "bank-additional-reduced-anova.csv");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  </script>
+</div></main></div></body></html>
